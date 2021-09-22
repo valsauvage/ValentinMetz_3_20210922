@@ -1,0 +1,13 @@
+header {
+    & figure img {
+        width: 100%;
+    }
+    & figcaption {
+        display: flex;
+        align-items: center;
+    }
+    & svg {
+        height: 1rem;
+        margin-right: 0.5rem;
+    }
+}

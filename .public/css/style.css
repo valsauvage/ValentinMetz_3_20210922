@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+header figure img {
+  width: 100%;
+}
+header figcaption {
+  display: flex;
+  align-items: center;
+}
+header svg {
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
