@@ -12,6 +12,7 @@ section {
             padding-bottom: $s-1;
             padding-left: $s-2;
             padding-right: $s-2;
+            width: 24px;
             border-radius: 50%;
             color: white;
             font-weight: normal;
@@ -26,11 +27,17 @@ section {
             background-color: $very-light-bg;
             padding: $s-35 $s-4;
             border-radius: 20px;
+            & svg {
+                color: $fourth-color;
+                margin-right: $s-3;
+                margin-left: -12px;
+            }
         }
-        & svg {
-            color: $fourth-color;
-            margin-right: $s-3;
-            margin-left: -12px;
+        & .highlight {
+            background-color: $second-color-light;
+            & svg {
+                color: $first-color;
+            }
         }
     }
 }
@@ -44,6 +51,9 @@ section {
         overflow: hidden;
         position: relative;
         margin-bottom: $s-3;
+    }
+    & a {
+        text-decoration: none;
     }
     & figure {
         width: 100%;
@@ -64,6 +74,30 @@ section {
     }
     & article {
         width: 100%;
+        color: black;
+        text-decoration: none;
+    }
+    & aside {
+        position: relative;
+    }
+    & .heart {
+        width: 32px;
+        opacity: 1;
+        color: black;
+    }
+    & .heart-hover {
+        position: absolute;
+        width: 32px;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        fill: url(#MyGradient);
+    }
+    & li a:hover .heart {
+        opacity: 0;
+    }
+    & li a:hover .heart-hover {
+        opacity: 1;
     }
     & .new {
         @include shadow;
@@ -73,7 +107,6 @@ section {
         right: 20px;
         background-color: $new-color;
         color: $new-color-text;
-        font-size: smaller;
         padding: $s-2 $s-3;
         border-radius: 2px;
     }
