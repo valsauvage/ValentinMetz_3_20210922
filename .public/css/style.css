@@ -30,7 +30,7 @@ body {
 
 button, button a {
   background-color: none;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   text-decoration: none;
   font-weight: bold;
   color: white;
@@ -104,6 +104,7 @@ section {
   padding-bottom: 0.2rem;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
+  width: 24px;
   border-radius: 50%;
   color: white;
   font-weight: normal;
@@ -121,10 +122,16 @@ section {
   padding: 1.5rem 2rem;
   border-radius: 20px;
 }
-#fonctionnement article svg {
+#fonctionnement article p svg {
   color: #7E7E7E;
   margin-right: 1rem;
   margin-left: -12px;
+}
+#fonctionnement article .highlight {
+  background-color: #F5EDFF;
+}
+#fonctionnement article .highlight svg {
+  color: #9356DC;
 }
 
 #restaurants {
@@ -137,6 +144,9 @@ section {
   overflow: hidden;
   position: relative;
   margin-bottom: 1rem;
+}
+#restaurants a {
+  text-decoration: none;
 }
 #restaurants figure {
   width: 100%;
@@ -159,6 +169,30 @@ section {
 }
 #restaurants article {
   width: 100%;
+  color: black;
+  text-decoration: none;
+}
+#restaurants aside {
+  position: relative;
+}
+#restaurants .heart {
+  width: 32px;
+  opacity: 1;
+  color: black;
+}
+#restaurants .heart-hover {
+  position: absolute;
+  width: 32px;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  fill: url(#MyGradient);
+}
+#restaurants li a:hover .heart {
+  opacity: 0;
+}
+#restaurants li a:hover .heart-hover {
+  opacity: 1;
 }
 #restaurants .new {
   box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
@@ -168,7 +202,6 @@ section {
   right: 20px;
   background-color: #99E2D0;
   color: #008766;
-  font-size: smaller;
   padding: 0.4rem 1rem;
   border-radius: 2px;
 }
