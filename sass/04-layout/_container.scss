@@ -1,0 +1,80 @@
+section {
+    padding: $s-4;
+}
+#fonctionnement {
+    & ul li {
+        @include flex-row;
+    }
+    & article {
+        & h4 {
+            background-color: $first-color;
+            padding-top: $s-1;
+            padding-bottom: $s-1;
+            padding-left: $s-2;
+            padding-right: $s-2;
+            border-radius: 50%;
+            color: white;
+            font-weight: normal;
+            margin-right: -12px;
+            z-index: 50;
+            display: relative;
+        }
+        & p {
+            @include flex-row;
+            @include shadow;
+            width: 100%;
+            background-color: $very-light-bg;
+            padding: $s-35 $s-4;
+            border-radius: 20px;
+        }
+        & svg {
+            color: $fourth-color;
+            margin-right: $s-3;
+            margin-left: -12px;
+        }
+    }
+}
+
+#restaurants {
+    background-color: $light-bg;
+    & li {
+        @include shadow;
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: $s-3;
+    }
+    & figure {
+        width: 100%;
+    }
+    & img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    & figcaption {
+        @include flex-row;
+        padding: $s-3;
+    }
+    & h3,
+    p {
+        margin-top: 0;
+        margin-bottom: $s-1;
+    }
+    & article {
+        width: 100%;
+    }
+    & .new {
+        @include shadow;
+        position: absolute;
+        z-index: 50;
+        top: 20px;
+        right: 20px;
+        background-color: $new-color;
+        color: $new-color-text;
+        font-size: smaller;
+        padding: $s-2 $s-3;
+        border-radius: 2px;
+    }
+}
