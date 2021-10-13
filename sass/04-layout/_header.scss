@@ -1,5 +1,5 @@
 // @follow-up HEADER CSS
-header {
+.main-header {
     & .logo {
         @include flex-row;
         width: 100%;

@@ -1,0 +1,20 @@
+footer {
+    background-color: $dark-bg;
+    padding: $s-4;
+    & .logo img {
+        filter: invert(100%) saturate(7431%) hue-rotate(147deg) brightness(95%) contrast(114%);
+        height: $s-3;
+        margin-bottom: $s-3;
+    }
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+    & svg {
+        margin-right: $s-25;
+        max-height: $s-25;
+    }
+    & li {
+        padding: $s-1;
+    }
+}

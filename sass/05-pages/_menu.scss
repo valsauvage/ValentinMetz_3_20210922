@@ -1,0 +1,146 @@
+.menu-header {
+    & .logo {
+        @include flex-row;
+        position: relative;
+        & a {
+            color: black;
+            padding-top: $s-3;
+            padding-bottom: $s-3;
+            position: absolute;
+            left: $s-4;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+    & figure img {
+        max-width: 200px;
+        padding-top: $s-3;
+        padding-bottom: $s-3;
+    }
+}
+.menu-hero {
+    position: relative;
+    padding: 0;
+    z-index: 0;
+    & figure {
+        height: 300px;
+        width: 100%;
+        & img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.menu-content {
+    background-color: $very-light-bg;
+    border-radius: $s-5;
+    padding: $s-3;
+    padding-bottom: 4rem;
+    margin-top: -4rem;
+    position: relative;
+    z-index: 20;
+    & h1 {
+        font-size: $s-4;
+        // margin: 0;
+    }
+    & aside {
+        position: relative;
+        margin-right: $s-3;
+    }
+    & .heart {
+        width: 32px;
+        opacity: 1;
+        color: black;
+        transition: 0.3s;
+    }
+    & .heart-hover {
+        position: absolute;
+        width: 32px;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        fill: url(#MyGradient);
+        transition: 0.3s;
+    }
+    & header {
+        @include flex-row;
+        justify-content: space-between;
+        &:hover .heart {
+            opacity: 0;
+        }
+        &:hover .heart-hover {
+            opacity: 1;
+        }
+    }
+    & h2 {
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: $s-3;
+        position: relative;
+        margin-bottom: $s-4;
+        &::after {
+            content: "";
+            width: $s-4;
+            position: absolute;
+            border-bottom: $s-1 solid $third-color;
+            bottom: -0.4rem;
+            left: 0;
+        }
+    }
+    & h3,
+    p {
+        margin: 0;
+    }
+    & li a {
+        @include shadow;
+        display: flex;
+        justify-content: space-between;
+        border-radius: $s-3;
+        margin-top: $s-3;
+        margin-bottom: $s-3;
+        background-color: white;
+        overflow: hidden;
+        text-decoration: none;
+        color: black;
+        // position: relative;
+        & .menu-title {
+            padding: $s-3;
+            width: 100%;
+        }
+        & .price {
+            padding: $s-3;
+            margin-top: auto;
+            transition: 0.3s;
+            transform: translateX(56px);
+        }
+        & .menu-check {
+            transform: translateX(56px);
+            background-color: $third-color;
+            padding: $s-3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            transition: 0.3s;
+            & svg {
+                color: white;
+            }
+        }
+        &:hover .price {
+            transform: translateX(0);
+        }
+        &:hover .menu-check {
+            transform: translateX(0);
+        }
+    }
+    & article {
+        margin-bottom: $s-6;
+    }
+    & .btn {
+        display: flex;
+        width: min-content;
+        margin: auto;
+    }
+}

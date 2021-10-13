@@ -51,6 +51,7 @@ section {
         overflow: hidden;
         position: relative;
         margin-bottom: $s-3;
+        transition: 0.3s;
     }
     & a {
         text-decoration: none;
@@ -84,6 +85,7 @@ section {
         width: 32px;
         opacity: 1;
         color: black;
+        transition: 0.3s;
     }
     & .heart-hover {
         position: absolute;
@@ -92,6 +94,7 @@ section {
         top: 0;
         left: 0;
         fill: url(#MyGradient);
+        transition: 0.3s;
     }
     & li a:hover .heart {
         opacity: 0;
