@@ -12,3 +12,9 @@
 @mixin shadow {
     box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
 }
+@mixin shadow-xl {
+    box-shadow: 4px 8px 32px -4px rgba(0, 0, 0, 0.2);
+}
+@mixin gradient {
+    background: linear-gradient(170deg, $second-color, $first-color);
+}

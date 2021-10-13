@@ -1,13 +1,16 @@
-button, button a {
+.btn {
+    @include shadow;
+    @include gradient;
     background-color: none;
-    background: linear-gradient(170deg, $second-color, $first-color);
     text-decoration: none;
-    font-weight: bold;
+    // font-weight: bold;
     color: white;
-    padding: $s-3;
+    padding: $s-3 $s-4;
     border: none;
     border-radius: 50px;
-}
-button {
-    @include shadow;
+    transition: 0.3s;
+    &:hover {
+        @include shadow-xl;
+        filter: saturate(70%) brightness(120%);
+    }
 }
