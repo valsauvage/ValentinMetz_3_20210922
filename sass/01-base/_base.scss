@@ -9,8 +9,15 @@ body {
         padding: 0;
         margin: 0;
     }
-    & ul, figure {
+    & ul,
+    figure {
         padding: 0;
         margin: 0;
+    }
+}
+html {
+    scroll-behavior: smooth;
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
     }
 }

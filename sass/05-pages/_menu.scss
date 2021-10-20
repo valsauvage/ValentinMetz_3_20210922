@@ -35,7 +35,8 @@
 }
 .menu-content {
     background-color: $very-light-bg;
-    border-radius: $s-5;
+    border-top-left-radius: $s-5;
+    border-top-right-radius: $s-5;
     padding: $s-3;
     padding-bottom: 4rem;
     margin-top: -4rem;
@@ -93,6 +94,11 @@
     p {
         margin: 0;
     }
+    & li {
+        opacity: 0;
+        transition-delay: 0.1s;
+        opacity: 1;
+    }
     & li a {
         @include shadow;
         display: flex;
@@ -104,7 +110,6 @@
         overflow: hidden;
         text-decoration: none;
         color: black;
-        // position: relative;
         & .menu-title {
             padding: $s-3;
             width: 100%;
@@ -126,6 +131,8 @@
             transition: 0.3s;
             & svg {
                 color: white;
+                transform: rotate(-360deg);
+                transition: 0.3s;
             }
         }
         &:hover .price {
@@ -133,6 +140,10 @@
         }
         &:hover .menu-check {
             transform: translateX(0);
+            & svg {
+                transform: rotate(0deg);
+                transition-delay: 0.1s;
+            }
         }
     }
     & article {
