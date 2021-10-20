@@ -38,6 +38,10 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .btn {
   box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
   background: linear-gradient(170deg, #FF79DA, #9356DC);
@@ -50,7 +54,7 @@ body {
   transition: 0.3s;
 }
 .btn:hover {
-  box-shadow: 4px 8px 32px -4px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 8px 32px -4px rgba(0, 0, 0, 0.3);
   filter: saturate(70%) brightness(120%);
 }
 
@@ -98,6 +102,29 @@ body {
 }
 .main-header svg {
   margin-right: 0.4rem;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+}
+.loader__img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.loader__img svg {
+  margin: auto;
+  font-size: xx-large;
 }
 
 section {
@@ -361,6 +388,11 @@ footer li {
 .menu-content li a .menu-title {
   padding: 1rem;
   width: 100%;
+}
+.menu-content li a .menu-title h3, .menu-content li a .menu-title p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-content li a .price {
   padding: 1rem;
