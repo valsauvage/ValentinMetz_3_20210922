@@ -1,0 +1,16 @@
+@for $i from 0 through 10 {
+    .menu-content li:nth-child(1n + #{$i}) {
+        animation-delay: 200ms + ($i * 200);
+    }
+}
+
+@keyframes menu-op {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

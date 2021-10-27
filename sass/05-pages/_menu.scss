@@ -55,6 +55,7 @@
         opacity: 1;
         color: black;
         transition: 0.3s;
+        cursor: pointer;
     }
     & .heart-hover {
         position: absolute;
@@ -64,16 +65,17 @@
         left: 0;
         fill: url(#MyGradient);
         transition: 0.3s;
+        cursor: pointer;
+    }
+    & aside:hover .heart {
+        opacity: 0;
+    }
+    & aside:hover .heart-hover {
+        opacity: 1;
     }
     & header {
         @include flex-row;
         justify-content: space-between;
-        &:hover .heart {
-            opacity: 0;
-        }
-        &:hover .heart-hover {
-            opacity: 1;
-        }
     }
     & h2 {
         font-weight: normal;
@@ -96,13 +98,13 @@
     }
     & li {
         opacity: 0;
-        transition-delay: 0.1s;
-        opacity: 1;
+        animation-name: menu-op;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
     }
     & li a {
         @include shadow;
         display: flex;
-        justify-content: space-between;
         border-radius: $s-3;
         margin-top: $s-3;
         margin-bottom: $s-3;
@@ -112,27 +114,34 @@
         color: black;
         & .menu-title {
             padding: $s-3;
+            overflow: hidden;
             width: 100%;
-            & h3, p {
+            display: flex;
+            flex-direction: column;
+            flex-grow: auto;
+            & h3,
+            p {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
         }
+        & .menu-price {
+            display: flex;
+            transition: 0.3s;
+            margin-right: -56px;
+        }
         & .price {
             padding: $s-3;
             margin-top: auto;
-            transition: 0.3s;
-            transform: translateX(56px);
         }
         & .menu-check {
-            transform: translateX(56px);
+            width: 56px;
             background-color: $third-color;
             padding: $s-3;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 56px;
             transition: 0.3s;
             & svg {
                 color: white;
@@ -140,15 +149,12 @@
                 transition: 0.3s;
             }
         }
-        &:hover .price {
-            transform: translateX(0);
+        &:hover .menu-price {
+            margin-right: 0;
         }
-        &:hover .menu-check {
-            transform: translateX(0);
-            & svg {
-                transform: rotate(0deg);
-                transition-delay: 0.1s;
-            }
+        &:hover .menu-check svg {
+            transform: rotate(0deg);
+            transition-delay: 0.1s;
         }
     }
     & article {
