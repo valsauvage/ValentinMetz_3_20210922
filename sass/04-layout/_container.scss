@@ -96,10 +96,10 @@ section {
         fill: url(#MyGradient);
         transition: 0.3s;
     }
-    & li a:hover .heart {
+    & aside:hover .heart {
         opacity: 0;
     }
-    & li a:hover .heart-hover {
+    & aside:hover .heart-hover {
         opacity: 1;
     }
     & .new {

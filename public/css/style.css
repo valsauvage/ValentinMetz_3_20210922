@@ -42,6 +42,60 @@ body {
   font-weight: bold;
 }
 
+.menu-content li:nth-child(1n+0) {
+  animation-delay: 200ms;
+}
+
+.menu-content li:nth-child(1n+1) {
+  animation-delay: 400ms;
+}
+
+.menu-content li:nth-child(1n+2) {
+  animation-delay: 600ms;
+}
+
+.menu-content li:nth-child(1n+3) {
+  animation-delay: 800ms;
+}
+
+.menu-content li:nth-child(1n+4) {
+  animation-delay: 1000ms;
+}
+
+.menu-content li:nth-child(1n+5) {
+  animation-delay: 1200ms;
+}
+
+.menu-content li:nth-child(1n+6) {
+  animation-delay: 1400ms;
+}
+
+.menu-content li:nth-child(1n+7) {
+  animation-delay: 1600ms;
+}
+
+.menu-content li:nth-child(1n+8) {
+  animation-delay: 1800ms;
+}
+
+.menu-content li:nth-child(1n+9) {
+  animation-delay: 2000ms;
+}
+
+.menu-content li:nth-child(1n+10) {
+  animation-delay: 2200ms;
+}
+
+@keyframes menu-op {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .btn {
   box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
   background: linear-gradient(170deg, #FF79DA, #9356DC);
@@ -56,6 +110,63 @@ body {
 .btn:hover {
   box-shadow: 4px 8px 32px -4px rgba(0, 0, 0, 0.3);
   filter: saturate(70%) brightness(120%);
+}
+
+.lds-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: white;
+  animation: lds-wrap 1s 1s forwards;
+}
+.lds-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid lightgray;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: lightgray transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-wrap {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -999;
+  }
 }
 
 .main-header .logo {
@@ -229,10 +340,10 @@ section {
   fill: url(#MyGradient);
   transition: 0.3s;
 }
-#restaurants li a:hover .heart {
+#restaurants aside:hover .heart {
   opacity: 0;
 }
-#restaurants li a:hover .heart-hover {
+#restaurants aside:hover .heart-hover {
   opacity: 1;
 }
 #restaurants .new {
@@ -327,6 +438,7 @@ footer li {
   opacity: 1;
   color: black;
   transition: 0.3s;
+  cursor: pointer;
 }
 .menu-content .heart-hover {
   position: absolute;
@@ -336,18 +448,19 @@ footer li {
   left: 0;
   fill: url(#MyGradient);
   transition: 0.3s;
+  cursor: pointer;
+}
+.menu-content aside:hover .heart {
+  opacity: 0;
+}
+.menu-content aside:hover .heart-hover {
+  opacity: 1;
 }
 .menu-content header {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-}
-.menu-content header:hover .heart {
-  opacity: 0;
-}
-.menu-content header:hover .heart-hover {
-  opacity: 1;
 }
 .menu-content h2 {
   font-weight: normal;
@@ -370,13 +483,13 @@ footer li {
 }
 .menu-content li {
   opacity: 0;
-  transition-delay: 0.1s;
-  opacity: 1;
+  animation-name: menu-op;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 .menu-content li a {
   box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
   display: flex;
-  justify-content: space-between;
   border-radius: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -387,27 +500,34 @@ footer li {
 }
 .menu-content li a .menu-title {
   padding: 1rem;
+  overflow: hidden;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: auto;
 }
-.menu-content li a .menu-title h3, .menu-content li a .menu-title p {
+.menu-content li a .menu-title h3,
+.menu-content li a .menu-title p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.menu-content li a .menu-price {
+  display: flex;
+  transition: 0.3s;
+  margin-right: -56px;
+}
 .menu-content li a .price {
   padding: 1rem;
   margin-top: auto;
-  transition: 0.3s;
-  transform: translateX(56px);
 }
 .menu-content li a .menu-check {
-  transform: translateX(56px);
+  width: 56px;
   background-color: #99E2D0;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
   transition: 0.3s;
 }
 .menu-content li a .menu-check svg {
@@ -415,11 +535,8 @@ footer li {
   transform: rotate(-360deg);
   transition: 0.3s;
 }
-.menu-content li a:hover .price {
-  transform: translateX(0);
-}
-.menu-content li a:hover .menu-check {
-  transform: translateX(0);
+.menu-content li a:hover .menu-price {
+  margin-right: 0;
 }
 .menu-content li a:hover .menu-check svg {
   transform: rotate(0deg);
