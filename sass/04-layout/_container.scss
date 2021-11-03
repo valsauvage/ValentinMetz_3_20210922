@@ -4,6 +4,8 @@ section {
 #fonctionnement {
     & ul li {
         @include flex-row;
+        width: 100%;
+        max-width: map-get($breakpoints, tablet);
     }
     & article {
         & h4 {
@@ -37,6 +39,14 @@ section {
             background-color: $second-color-light;
             & svg {
                 color: $first-color;
+            }
+        }
+    }
+    @include desktop-only {
+        & article {
+            & ul {
+                display: flex;
+                gap: $s-4;
             }
         }
     }
@@ -112,5 +122,17 @@ section {
         color: $new-color-text;
         padding: $s-2 $s-3;
         border-radius: 2px;
+    }
+    @include tablet-only {
+        & ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: $s-4;
+        }
+    }
+    @include desktop-only {
+        & ul {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
     }
 }

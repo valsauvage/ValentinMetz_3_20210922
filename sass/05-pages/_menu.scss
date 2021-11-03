@@ -32,6 +32,14 @@
             object-fit: cover;
         }
     }
+    @include desktop-only {
+        figure {
+            height: 600px;
+            & img {
+                height: 600px;
+            }
+        }
+    }
 }
 .menu-content {
     background-color: $very-light-bg;
@@ -39,6 +47,9 @@
     border-top-right-radius: $s-5;
     padding: $s-3;
     padding-bottom: 4rem;
+    max-width: map-get($breakpoints, desktop);
+    margin-left:auto;
+    margin-right:auto;
     margin-top: -4rem;
     position: relative;
     z-index: 20;
@@ -101,6 +112,7 @@
         animation-name: menu-op;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+        width: 100%;
     }
     & li a {
         @include shadow;
@@ -164,5 +176,24 @@
         display: flex;
         width: min-content;
         margin: auto;
+    }
+    @include tablet-only {
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: $s-4;
+            & li a {
+                min-height: 100px;
+                margin: 0;
+            }
+        }
+    }
+    @include desktop-only {
+        margin-top: -8rem;
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: $s-4;
+        }
     }
 }
