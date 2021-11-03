@@ -21,5 +21,9 @@ $s-5: 3rem;
 $s-6: 4rem;
 
 
+// BREAKPOINTS
 
-
+$breakpoints: (
+    tablet: 680px,
+    desktop: 1280px
+);

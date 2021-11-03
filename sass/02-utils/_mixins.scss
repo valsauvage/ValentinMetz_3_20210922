@@ -18,3 +18,16 @@
 @mixin gradient {
     background: linear-gradient(170deg, $second-color, $first-color);
 }
+
+// breakpoints
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
