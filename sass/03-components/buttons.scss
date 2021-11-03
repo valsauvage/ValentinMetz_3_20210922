@@ -1,9 +1,7 @@
 .btn {
     @include shadow;
     @include gradient;
-    background-color: none;
     text-decoration: none;
-    // font-weight: bold;
     color: white;
     padding: $s-3 $s-4;
     border: none;
