@@ -531,7 +531,7 @@ footer li {
   animation-fill-mode: forwards;
   width: 100%;
 }
-.menu-content li button {
+.menu-content li a {
   box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
   width: 100%;
   padding: 0;
@@ -545,7 +545,7 @@ footer li {
   text-decoration: none;
   color: black;
 }
-.menu-content li button .menu-title {
+.menu-content li a .menu-title {
   padding: 1rem;
   overflow: hidden;
   width: 100%;
@@ -553,22 +553,22 @@ footer li {
   text-align: left;
   flex-direction: column;
 }
-.menu-content li button .menu-title h3,
-.menu-content li button .menu-title p {
+.menu-content li a .menu-title h3,
+.menu-content li a .menu-title p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu-content li button .menu-price {
+.menu-content li a .menu-price {
   display: flex;
   transition: 0.3s;
   margin-right: -56px;
 }
-.menu-content li button .price {
+.menu-content li a .price {
   padding: 1rem;
   margin-top: auto;
 }
-.menu-content li button .menu-check {
+.menu-content li a .menu-check {
   width: 56px;
   background-color: #99E2D0;
   padding: 1rem;
@@ -577,23 +577,23 @@ footer li {
   justify-content: center;
   transition: 0.3s;
 }
-.menu-content li button .menu-check svg {
+.menu-content li a .menu-check svg {
   color: white;
   transform: rotate(-360deg);
   transition: 0.3s;
 }
-.menu-content li button:focus .menu-price {
+.menu-content li a:focus .menu-price {
   margin-right: 0px;
 }
-.menu-content li button:focus .menu-check svg {
+.menu-content li a:focus .menu-check svg {
   transform: rotate(0deg);
   transition-delay: 0.1s;
 }
 @media screen and (min-width: 1280px) {
-  .menu-content li button:hover .menu-price {
+  .menu-content li a:hover .menu-price {
     margin-right: 0px;
   }
-  .menu-content li button:hover .menu-check svg {
+  .menu-content li a:hover .menu-check svg {
     transform: rotate(0deg);
     transition-delay: 0.1s;
   }

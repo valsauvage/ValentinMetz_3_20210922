@@ -87,7 +87,7 @@
         animation-fill-mode: forwards;
         width: 100%;
     }
-    & li button {
+    & li a {
         @include shadow;
         width: 100%;
         padding: 0;
