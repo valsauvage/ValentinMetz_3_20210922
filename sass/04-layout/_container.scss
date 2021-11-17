@@ -21,7 +21,7 @@ section {
             margin-right: -12px;
             z-index: 50;
         }
-        & p {
+        & button {
             @include flex-row;
             @include shadow;
             width: 100%;
@@ -33,11 +33,25 @@ section {
                 margin-right: $s-3;
                 margin-left: -12px;
             }
-        }
-        & .highlight {
-            background-color: $second-color-light;
-            & svg {
-                color: $first-color;
+            &:focus {
+                background-color: $second-color-light;
+                & svg {
+                    color: $first-color;
+                }
+            }
+            &:active {
+                background-color: $second-color-light;
+                & svg {
+                    color: $first-color;
+                }
+            }
+            @include desktop-only {
+                &:hover {
+                    background-color: $second-color-light;
+                    & svg {
+                        color: $first-color;
+                    }
+                }
             }
         }
     }
@@ -86,30 +100,6 @@ section {
         width: 100%;
         color: black;
         text-decoration: none;
-    }
-    & aside {
-        position: relative;
-    }
-    & .heart {
-        width: 32px;
-        opacity: 1;
-        color: black;
-        transition: 0.3s;
-    }
-    & .heart-hover {
-        position: absolute;
-        width: 32px;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        fill: url(#MyGradient);
-        transition: 0.3s;
-    }
-    & aside:hover .heart {
-        opacity: 0;
-    }
-    & aside:hover .heart-hover {
-        opacity: 1;
     }
     & .new {
         @include shadow;

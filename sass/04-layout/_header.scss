@@ -29,10 +29,16 @@
     & h1 {
         margin-top: 0;
     }
-    & p {
-        opacity: 0.7;
-    }
     & svg {
         margin-right: $s-2;
+    }
+    & input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        &::placeholder {
+            opacity: 0.7;
+            font-weight: bold;
+        }
     }
 }

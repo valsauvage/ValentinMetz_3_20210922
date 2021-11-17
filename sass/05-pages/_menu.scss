@@ -55,38 +55,11 @@
     z-index: 20;
     & h1 {
         font-size: $s-4;
-        // margin: 0;
-    }
-    & aside {
-        position: relative;
-        margin-right: $s-3;
-    }
-    & .heart {
-        width: 32px;
-        opacity: 1;
-        color: black;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-    & .heart-hover {
-        position: absolute;
-        width: 32px;
-        opacity: 0;
-        top: 0;
-        left: 0;
-        fill: url(#MyGradient);
-        transition: 0.3s;
-        cursor: pointer;
-    }
-    & aside:hover .heart {
-        opacity: 0;
-    }
-    & aside:hover .heart-hover {
-        opacity: 1;
     }
     & header {
         @include flex-row;
         justify-content: space-between;
+        position: relative;
     }
     & h2 {
         font-weight: normal;
@@ -114,9 +87,12 @@
         animation-fill-mode: forwards;
         width: 100%;
     }
-    & li a {
+    & li button {
         @include shadow;
-        display: flex;
+        width: 100%;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
         border-radius: $s-3;
         margin-top: $s-3;
         margin-bottom: $s-3;
@@ -129,6 +105,7 @@
             overflow: hidden;
             width: 100%;
             display: flex;
+            text-align: left;
             flex-direction: column;
             & h3,
             p {
@@ -160,12 +137,21 @@
                 transition: 0.3s;
             }
         }
-        &:hover .menu-price {
-            margin-right: 0;
+        &:focus .menu-price {
+            margin-right: 0px;
         }
-        &:hover .menu-check svg {
+        &:focus .menu-check svg {
             transform: rotate(0deg);
             transition-delay: 0.1s;
+        }
+        @include desktop-only {
+            &:hover .menu-price {
+                margin-right: 0px;
+            }
+            &:hover .menu-check svg {
+                transform: rotate(0deg);
+                transition-delay: 0.1s;
+            }
         }
     }
     & article {
@@ -194,5 +180,8 @@
             grid-template-columns: 1fr 1fr 1fr;
             gap: $s-4;
         }
+    }
+    & .btn-heart {
+        transform:translateY(-0.8rem);
     }
 }
