@@ -26,11 +26,19 @@ html {
   }
 }
 
-html {
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+html, button {
   font-size: 16px;
 }
 
-body {
+body, button {
   font-family: "Roboto", sans-serif;
 }
 
@@ -109,6 +117,42 @@ body {
 .btn:hover {
   box-shadow: 4px 8px 32px -4px rgba(0, 0, 0, 0.3);
   filter: saturate(70%) brightness(120%);
+}
+
+.btn-heart {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.4rem;
+}
+.btn-heart .heart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  opacity: 1;
+  color: black;
+  transition: 0.3s;
+}
+.btn-heart .heart-hover {
+  position: absolute;
+  width: 32px;
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+  fill: url(#MyGradient);
+  transition: 0.3s;
+}
+.btn-heart:active .heart {
+  opacity: 0;
+}
+.btn-heart:focus .heart {
+  opacity: 0;
+}
+.btn-heart:active .heart-hover {
+  opacity: 1;
+}
+.btn-heart:focus .heart-hover {
+  opacity: 1;
 }
 
 .lds-wrap {
@@ -207,11 +251,17 @@ body {
 .main-header h1 {
   margin-top: 0;
 }
-.main-header p {
-  opacity: 0.7;
-}
 .main-header svg {
   margin-right: 0.4rem;
+}
+.main-header input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.main-header input::placeholder {
+  opacity: 0.7;
+  font-weight: bold;
 }
 
 .loader {
@@ -261,7 +311,7 @@ section {
   margin-right: -12px;
   z-index: 50;
 }
-#fonctionnement article p {
+#fonctionnement article button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,16 +321,30 @@ section {
   padding: 1.5rem 2rem;
   border-radius: 20px;
 }
-#fonctionnement article p svg {
+#fonctionnement article button svg {
   color: #7E7E7E;
   margin-right: 1rem;
   margin-left: -12px;
 }
-#fonctionnement article .highlight {
+#fonctionnement article button:focus {
   background-color: #F5EDFF;
 }
-#fonctionnement article .highlight svg {
+#fonctionnement article button:focus svg {
   color: #9356DC;
+}
+#fonctionnement article button:active {
+  background-color: #F5EDFF;
+}
+#fonctionnement article button:active svg {
+  color: #9356DC;
+}
+@media screen and (min-width: 1280px) {
+  #fonctionnement article button:hover {
+    background-color: #F5EDFF;
+  }
+  #fonctionnement article button:hover svg {
+    color: #9356DC;
+  }
 }
 @media screen and (min-width: 1280px) {
   #fonctionnement article ul {
@@ -327,30 +391,6 @@ section {
   width: 100%;
   color: black;
   text-decoration: none;
-}
-#restaurants aside {
-  position: relative;
-}
-#restaurants .heart {
-  width: 32px;
-  opacity: 1;
-  color: black;
-  transition: 0.3s;
-}
-#restaurants .heart-hover {
-  position: absolute;
-  width: 32px;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  fill: url(#MyGradient);
-  transition: 0.3s;
-}
-#restaurants aside:hover .heart {
-  opacity: 0;
-}
-#restaurants aside:hover .heart-hover {
-  opacity: 1;
 }
 #restaurants .new {
   box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
@@ -458,38 +498,12 @@ footer li {
 .menu-content h1 {
   font-size: 2rem;
 }
-.menu-content aside {
-  position: relative;
-  margin-right: 1rem;
-}
-.menu-content .heart {
-  width: 32px;
-  opacity: 1;
-  color: black;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.menu-content .heart-hover {
-  position: absolute;
-  width: 32px;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  fill: url(#MyGradient);
-  transition: 0.3s;
-  cursor: pointer;
-}
-.menu-content aside:hover .heart {
-  opacity: 0;
-}
-.menu-content aside:hover .heart-hover {
-  opacity: 1;
-}
 .menu-content header {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: space-between;
+  position: relative;
 }
 .menu-content h2 {
   font-weight: normal;
@@ -517,9 +531,12 @@ footer li {
   animation-fill-mode: forwards;
   width: 100%;
 }
-.menu-content li a {
+.menu-content li button {
   box-shadow: 2px 4px 16px -2px rgba(0, 0, 0, 0.2);
-  display: flex;
+  width: 100%;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
   border-radius: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -528,29 +545,30 @@ footer li {
   text-decoration: none;
   color: black;
 }
-.menu-content li a .menu-title {
+.menu-content li button .menu-title {
   padding: 1rem;
   overflow: hidden;
   width: 100%;
   display: flex;
+  text-align: left;
   flex-direction: column;
 }
-.menu-content li a .menu-title h3,
-.menu-content li a .menu-title p {
+.menu-content li button .menu-title h3,
+.menu-content li button .menu-title p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu-content li a .menu-price {
+.menu-content li button .menu-price {
   display: flex;
   transition: 0.3s;
   margin-right: -56px;
 }
-.menu-content li a .price {
+.menu-content li button .price {
   padding: 1rem;
   margin-top: auto;
 }
-.menu-content li a .menu-check {
+.menu-content li button .menu-check {
   width: 56px;
   background-color: #99E2D0;
   padding: 1rem;
@@ -559,17 +577,26 @@ footer li {
   justify-content: center;
   transition: 0.3s;
 }
-.menu-content li a .menu-check svg {
+.menu-content li button .menu-check svg {
   color: white;
   transform: rotate(-360deg);
   transition: 0.3s;
 }
-.menu-content li a:hover .menu-price {
-  margin-right: 0;
+.menu-content li button:focus .menu-price {
+  margin-right: 0px;
 }
-.menu-content li a:hover .menu-check svg {
+.menu-content li button:focus .menu-check svg {
   transform: rotate(0deg);
   transition-delay: 0.1s;
+}
+@media screen and (min-width: 1280px) {
+  .menu-content li button:hover .menu-price {
+    margin-right: 0px;
+  }
+  .menu-content li button:hover .menu-check svg {
+    transform: rotate(0deg);
+    transition-delay: 0.1s;
+  }
 }
 .menu-content article {
   margin-bottom: 4rem;
@@ -599,6 +626,9 @@ footer li {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
+}
+.menu-content .btn-heart {
+  transform: translateY(-0.8rem);
 }
 
 /*# sourceMappingURL=style.css.map */

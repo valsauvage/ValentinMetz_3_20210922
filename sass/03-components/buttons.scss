@@ -12,3 +12,38 @@
         filter: saturate(70%) brightness(120%);
     }
 }
+.btn-heart {
+    & .heart {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 32px;
+        opacity: 1;
+        color: black;
+        transition: 0.3s;
+    }
+    & .heart-hover {
+        position: absolute;
+        width: 32px;
+        opacity: 0;
+        right: 0;
+        bottom: 0;
+        fill: url(#MyGradient);
+        transition: 0.3s;
+    }
+    position: absolute;
+    right: $s-3;
+    bottom: $s-2;
+    &:active .heart {
+        opacity: 0;
+    }
+    &:focus .heart {
+        opacity: 0;
+    }
+    &:active .heart-hover {
+        opacity: 1;
+    }
+    &:focus .heart-hover {
+        opacity: 1;
+    }
+}
