@@ -1,254 +1,358 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Oh My Food</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oh My Food</title>
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Shrikhand&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Shrikhand&display=swap"
-        rel="stylesheet" />
+        <!-- FONT AWESOME -->
+        <script
+            src="https://kit.fontawesome.com/3f57659ef2.js"
+            crossorigin="anonymous"
+        ></script>
 
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/3f57659ef2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="public/css/style.css" />
+    </head>
 
-    <link rel="stylesheet" href="public/css/style.css" />
-</head>
-
-<body>
-
-    <!-- @follow-up LOADER -->
-    <!-- 1.5 s -->
-    <section class="lds-wrap">
-        <div class="lds-ring">
-            <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-    </div>
-</section>
-    
-
-    <!-- @follow-up HEADER HTML -->
-    <header class="main-header">
-        <figure>
-            <div class="logo">
-                <img src="img/logo/ohmyfood.png" alt="Oh My Food Logo" />
+    <body>
+        <!-- @follow-up LOADER -->
+        <!-- 1.5 s -->
+        <section class="lds-wrap">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-
-            <figcaption>
-                <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
-            </figcaption>
-        </figure>
-
-        <section class="CTA">
-            <h1>Réservez le menu qui vous convient</h1>
-            <h3>
-                Découvrez des restaurants d'exception, sélectionnés par nos
-                soins.
-            </h3>
-            <a class="btn" href="#">Explorer nos restaurants</a>
         </section>
-    </header>
 
-    <!-- @follow-up FONCTIONNEMENT -->
-    <section id="fonctionnement">
-        <h2>Fonctionnement</h2>
-        <article>
-            <ul>
-                <li>
-                    <h4>1</h4>
-                    <p><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p>
-                </li>
-                <li>
-                    <h4>2</h4>
-                    <p><i class="fas fa-list-ul"></i>Composez votre menu</p>
-                </li>
-                <li>
-                    <h4>3</h4>
-                    <p class="highlight"><i class="fas fa-store"></i>Dégustez au restaurant</p>
-                </li>
-            </ul>
-        </article>
-    </section>
+        <!-- @follow-up HEADER HTML -->
+        <header class="main-header">
+            <figure>
+                <div class="logo">
+                    <img src="img/logo/ohmyfood.png" alt="Oh My Food Logo" />
+                </div>
 
-    <!-- @follow-up SECTION RESTAURANTS -->
-    <section id="restaurants">
-        <h2>Restaurants</h2>
-        <ul>
-            <li>
-                <a href="la-palette-du-gout">
-                    <figure>
-                        <img src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                        <figcaption>
-                            <article>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
-                            </article>
-                            <aside>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart-hover" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <defs>
-                                        <linearGradient id="MyGradient" x2="0" y2="1">
-                                            <stop offset="5%" stop-color="#9356DC" />
-                                            <stop offset="95%" stop-color="#FF79DA" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill-rule="evenodd"
-                                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </aside>
-                        </figcaption>
-                    </figure>
-                    <p class="new">Nouveau</p>
-                </a>
-            </li>
-            <li>
-                <a href="la-note-enchantee">
-                    <figure>
-                        <img src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                        <figcaption>
-                            <article>
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
-                            </article>
-                            <aside>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart-hover" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <defs>
-                                        <linearGradient x2="0" y2="1">
-                                            <stop offset="5%" stop-color="#9356DC" />
-                                            <stop offset="95%" stop-color="#FF79DA" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill-rule="evenodd"
-                                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </aside>
-                        </figcaption>
-                    </figure>
-                    <p class="new">Nouveau</p>
-                </a>
-            </li>
-            <li>
-                <a href="menu-a-la-francaise">
-                    <figure>
-                        <img src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-                        <figcaption>
-                            <article>
-                                <h3>À la française</h3>
-                                <p>Cité Rouge</p>
-                            </article>
-                            <aside>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart-hover" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <defs>
-                                        <linearGradient x2="0" y2="1">
-                                            <stop offset="5%" stop-color="#9356DC" />
-                                            <stop offset="95%" stop-color="#FF79DA" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill-rule="evenodd"
-                                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </aside>
-                        </figcaption>
-                    </figure>
-                    <!-- <p class="new">Nouveau</p> -->
-                </a>
-            </li>
-            <li>
-                <a href="le-delice-des-sens.html">
-                    <figure>
-                        <img src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                        <figcaption>
-                            <article>
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
-                            </article>
-                            <aside>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 heart-hover" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <defs>
-                                        <linearGradient x2="0" y2="1">
-                                            <stop offset="5%" stop-color="#9356DC" />
-                                            <stop offset="95%" stop-color="#FF79DA" />
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill-rule="evenodd"
-                                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </aside>
-                        </figcaption>
-                    </figure>
-                    <!-- <p class="new">Nouveau</p> -->
-                </a>
-            </li>
-        </ul>
+                <figcaption>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>Paris, Belleville
+                    </p>
+                </figcaption>
+            </figure>
 
+            <section class="CTA">
+                <h1>Réservez le menu qui vous convient</h1>
+                <h3>
+                    Découvrez des restaurants d'exception, sélectionnés par nos
+                    soins.
+                </h3>
+                <a class="btn" href="#">Explorer nos restaurants</a>
+            </section>
+        </header>
 
-    </section>
-
-    <footer>
-
-        <figure>
-            <div class="logo">
-                <img src="img/logo/ohmyfood@2x.svg" alt="Oh My Food Logo" />
-            </div>
-
-            <figcaption>
+        <!-- @follow-up FONCTIONNEMENT -->
+        <section id="fonctionnement">
+            <h2>Fonctionnement</h2>
+            <article>
                 <ul>
                     <li>
-                        <a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+                        <h4>1</h4>
+                        <p>
+                            <i class="fas fa-mobile-alt"></i>Choisissez un
+                            restaurant
+                        </p>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-hands-helping"></i>Proposer un restaurant</a>
+                        <h4>2</h4>
+                        <p><i class="fas fa-list-ul"></i>Composez votre menu</p>
                     </li>
                     <li>
-                        <a href="#">Mentions légales</a>
-                    </li>
-                    <li>
-                        <a href="mailto:contact@ohmyfood.com">Contact</a>
+                        <h4>3</h4>
+                        <p class="highlight">
+                            <i class="fas fa-store"></i>Dégustez au restaurant
+                        </p>
                     </li>
                 </ul>
-            </figcaption>
-        </figure>
+            </article>
+        </section>
 
-    </footer>
+        <!-- @follow-up SECTION RESTAURANTS -->
+        <section id="restaurants">
+            <h2>Restaurants</h2>
+            <ul>
+                <li>
+                    <a href="la-palette-du-gout">
+                        <figure>
+                            <img
+                                src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt=""
+                            />
+                            <figcaption>
+                                <article>
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                </article>
+                                <aside>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart-hover"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <defs>
+                                            <linearGradient
+                                                id="MyGradient"
+                                                x2="0"
+                                                y2="1"
+                                            >
+                                                <stop
+                                                    offset="5%"
+                                                    stop-color="#9356DC"
+                                                />
+                                                <stop
+                                                    offset="95%"
+                                                    stop-color="#FF79DA"
+                                                />
+                                            </linearGradient>
+                                        </defs>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </aside>
+                            </figcaption>
+                        </figure>
+                        <p class="new">Nouveau</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="la-note-enchantee">
+                        <figure>
+                            <img
+                                src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt=""
+                            />
+                            <figcaption>
+                                <article>
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                </article>
+                                <aside>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart-hover"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <defs>
+                                            <linearGradient x2="0" y2="1">
+                                                <stop
+                                                    offset="5%"
+                                                    stop-color="#9356DC"
+                                                />
+                                                <stop
+                                                    offset="95%"
+                                                    stop-color="#FF79DA"
+                                                />
+                                            </linearGradient>
+                                        </defs>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </aside>
+                            </figcaption>
+                        </figure>
+                        <p class="new">Nouveau</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="menu-a-la-francaise">
+                        <figure>
+                            <img
+                                src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt=""
+                            />
+                            <figcaption>
+                                <article>
+                                    <h3>À la française</h3>
+                                    <p>Cité Rouge</p>
+                                </article>
+                                <aside>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart-hover"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <defs>
+                                            <linearGradient x2="0" y2="1">
+                                                <stop
+                                                    offset="5%"
+                                                    stop-color="#9356DC"
+                                                />
+                                                <stop
+                                                    offset="95%"
+                                                    stop-color="#FF79DA"
+                                                />
+                                            </linearGradient>
+                                        </defs>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </aside>
+                            </figcaption>
+                        </figure>
+                        <!-- <p class="new">Nouveau</p> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="le-delice-des-sens.html">
+                        <figure>
+                            <img
+                                src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt=""
+                            />
+                            <figcaption>
+                                <article>
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                </article>
+                                <aside>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                                        />
+                                    </svg>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 heart-hover"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <defs>
+                                            <linearGradient x2="0" y2="1">
+                                                <stop
+                                                    offset="5%"
+                                                    stop-color="#9356DC"
+                                                />
+                                                <stop
+                                                    offset="95%"
+                                                    stop-color="#FF79DA"
+                                                />
+                                            </linearGradient>
+                                        </defs>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </aside>
+                            </figcaption>
+                        </figure>
+                        <!-- <p class="new">Nouveau</p> -->
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-</body>
+        <footer>
+            <figure>
+                <div class="logo">
+                    <img src="img/logo/ohmyfood@2x.svg" alt="Oh My Food Logo" />
+                </div>
 
+                <figcaption>
+                    <ul>
+                        <li>
+                            <a href="#"
+                                ><i class="fas fa-utensils"></i>Proposer un
+                                restaurant</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><i class="fas fa-hands-helping"></i>Proposer un
+                                restaurant</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#">Mentions légales</a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@ohmyfood.com">Contact</a>
+                        </li>
+                    </ul>
+                </figcaption>
+            </figure>
+        </footer>
+    </body>
 </html>
